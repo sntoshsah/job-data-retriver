@@ -7,7 +7,7 @@ from rag.llm import HFLLM
 from rag.vector_store import FAISSVectorStore
 from scripts.ingest import data_ingestion
 
-app = FastAPI(title="Job RAG (Hugging Face)")
+app = FastAPI(title="Job Data Retriever (RAG)")
 
 DATA_DIR = "data"
 INDEX_FILE = "job_index.faiss"
@@ -56,7 +56,7 @@ def sanitize_for_json(obj):
     return obj
 
 
-@app.post("/api/query")
+@app.post("/api/query", tags=["RAG"])
 def query_jobs(req: QueryRequest):
     docs = retriever.retrieve(req.query, req.top_k)
     prompt = build_prompt(req.query, docs)
