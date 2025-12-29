@@ -19,15 +19,19 @@ This project implements a RAG-based API for retrieving and generating responses 
 1. Clone the repository:
    ```bash
    git clone git@github.com:sntoshsah/job-data-retriver.git
-   cd GenAI_task
+   cd job-data-retriver
    ```
-
-2. Install dependencies:
+2. Create Virtual Environment and activate (Linux)
+   ```
+   python3 -m venv .venv 
+   source .venv/bin/activate
+   ```
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Ensure you have the job data file `data/LF Jobs.xlsx` in the data directory.
+4. Ensure you have the job data file `data/LF Jobs.xlsx` in the data directory.
 
 ## Usage
 
