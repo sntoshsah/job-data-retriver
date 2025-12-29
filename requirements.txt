@@ -1,0 +1,10 @@
+fastapi[standard]
+huggingface
+chromadb
+pandas
+ollama
+faiss-cpu
+sentence-transformers
+ipykernel
+bs4
+openpyxl
