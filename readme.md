@@ -39,6 +39,8 @@ uvicorn app.main:app --reload
 ```
 
 The API will be available at `http://localhost:8000`.
+or,
+The API will be available at `http://localhost:8000/docs` in swagger UI.
 
 ### API Endpoints
 
@@ -48,9 +50,13 @@ The API will be available at `http://localhost:8000`.
 Example request:
 ```json
 {
-  "query": "What are some software engineering jobs in New York?"
+  "query": "What are some software engineering jobs in Los Angeles, CA?"
 }
 ```
+
+Example Response:
+
+![API Response Example](static/image.png)
 
 ### Data Ingestion
 

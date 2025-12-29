@@ -55,6 +55,9 @@ def sanitize_for_json(obj):
         return [sanitize_for_json(i) for i in obj]
     return obj
 
+@app.get("/", tags=["Health_Check"])
+def health():
+    return {"Status":"Ok", "Response":"The API is Healthy."}
 
 @app.post("/api/query", tags=["RAG"])
 def query_jobs(req: QueryRequest):
